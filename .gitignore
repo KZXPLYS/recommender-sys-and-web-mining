@@ -1,0 +1,16 @@
+# Local datasets and original working copies
+datasets/*
+!datasets/README.md
+.local-backup/
+
+# Python / Jupyter / macOS
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+.DS_Store
+
+# Local credentials
+.env
+.env.*
+!.env.example
