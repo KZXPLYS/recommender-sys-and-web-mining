@@ -40,7 +40,7 @@ python -m pip install -r requirements.txt
 python -m jupyterlab
 ```
 
-Place the course datasets in `datasets/` as described in [the data guide](datasets/README.md). Open either runner notebook and execute the setup cells in order. HW1 calls its question functions at the end; HW2 defines several optional `testQ*` functions whose calls are commented out. Uncomment or call them to run the corresponding experiments.
+Download the six original data files from [Project datasets](https://github.com/KZXPLYS/recommender-sys-and-web-mining/releases/tag/datasets-v1) and place them in `datasets/`, as described in [the data guide](datasets/README.md). Open either runner notebook and execute the setup cells in order. HW1 calls its question functions at the end; HW2 defines several optional `testQ*` functions whose calls are commented out. Uncomment or call them to run the corresponding experiments.
 
 Dependencies are currently unpinned; a reproducible environment lock should be recorded after a successful full run.
 
@@ -51,8 +51,7 @@ recommender-sys-and-web-mining/
 ├── HW1/                    # Implementation and experiment runner
 ├── HW2/                    # Implementation and experiment runner
 ├── archive/templates/      # Original course scaffolds, not runnable solutions
-├── datasets/               # Local data; only the data guide is tracked
-├── docs/                   # Project notes and publishing checklist
+├── datasets/               # Data download guide; files in Releases
 └── requirements.txt
 ```
 
@@ -66,6 +65,6 @@ These are educational experiments. Some HW1 metrics are calculated on the same d
 
 - 优先阅读本页了解项目，再查看 Python 实现与运行笔记本。
 - 未完成的课程模板已移到 `archive/templates/`，不作为可运行成果。
-- 数据集、缓存和原始文件备份不会被 Git 收录。
+- 完整数据集已作为 GitHub Releases 附件提供下载；下载后放入本地 `datasets/`。缓存和原始文件备份不上传。
 - 本地原文件备份位于 `.local-backup/`，用于需要时恢复。
 - GitHub 代码仓库用来展示源码；个人网站可以链接到这里，或增加项目介绍页。网站接入方式需根据现有网站仓库确定。
