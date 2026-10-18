@@ -8,8 +8,8 @@ A learning portfolio exploring review-based prediction, feature engineering, mod
 
 | Project | Methods | Evaluation |
 | --- | --- | --- |
-| [HW1: Review prediction](HW1/) | Linear regression; calendar feature encoding; balanced logistic regression; ranking by predicted probability | MSE, balanced error rate (BER), precision@K |
-| [HW2: Classification & recommendation](HW2/) | Feature ablation; regularization selection; Jaccard item similarity; item-based rating prediction; shrinkage toward the global mean | Validation/test BER, rating MSE |
+| [HW1: Review prediction](HWs/HW1/) | Linear regression; calendar feature encoding; balanced logistic regression; ranking by predicted probability | MSE, balanced error rate (BER), precision@K |
+| [HW2: Classification & recommendation](HWs/HW2/) | Feature ablation; regularization selection; Jaccard item similarity; item-based rating prediction; shrinkage toward the global mean | Validation/test BER, rating MSE |
 
 ### HW1 · Review prediction
 
@@ -18,7 +18,7 @@ A learning portfolio exploring review-based prediction, feature engineering, mod
 - Predict positive beer reviews and examine ranking precision.
 - Explore additional sensory-rating and ABV features.
 
-Implementation: [homework1.py](HW1/homework1.py) · Experiments: [hw1_runner.ipynb](HW1/hw1_runner.ipynb)
+Implementation: [homework1.py](HWs/HW1/homework1.py) · Experiments: [hw1_runner.ipynb](HWs/HW1/hw1_runner.ipynb)
 
 ### HW2 · Classification & recommendation
 
@@ -27,7 +27,17 @@ Implementation: [homework1.py](HW1/homework1.py) · Experiments: [hw1_runner.ipy
 - Find similar products using reviewer-set Jaccard similarity.
 - Predict ratings with item-centered collaborative filtering and a global-mean blend.
 
-Implementation: [homework2.py](HW2/homework2.py) · Experiments: [hw2_runner.ipynb](HW2/hw2_runner.ipynb)
+Implementation: [homework2.py](HWs/HW2/homework2.py) · Experiments: [hw2_runner.ipynb](HWs/HW2/hw2_runner.ipynb)
+
+## Download the data / 下载数据
+
+1. Open [Project datasets](https://github.com/KZXPLYS/recommender-sys-and-web-mining/releases/tag/datasets-v1).
+2. Expand **Assets** and click the data filenames, or use the [direct download links](datasets/README.md).
+3. Save the downloaded files in the project-root `datasets/` folder, next to `HWs/`. Keep the original filenames and do not extract `.gz` files.
+
+打开上面的下载页，在 **Assets** 中点击数据文件名，下载后放入根目录 `datasets/`。HW1 需要 fantasy 和 beer 数据；HW2 需要 beer 和 Amazon 数据。完整清单及直接下载链接见 [datasets/README.md](datasets/README.md)。
+
+**Download ZIP / git clone includes code only.** Release data must be downloaded separately; the two “Source code” attachments are not datasets.
 
 ## Run locally
 
@@ -40,7 +50,7 @@ python -m pip install -r requirements.txt
 python -m jupyterlab
 ```
 
-Download the six original data files from [Project datasets](https://github.com/KZXPLYS/recommender-sys-and-web-mining/releases/tag/datasets-v1) and place them in `datasets/`, as described in [the data guide](datasets/README.md). Open either runner notebook and execute the setup cells in order. HW1 calls its question functions at the end; HW2 defines several optional `testQ*` functions whose calls are commented out. Uncomment or call them to run the corresponding experiments.
+Download the six original data files from [Project datasets](https://github.com/KZXPLYS/recommender-sys-and-web-mining/releases/tag/datasets-v1) and place them in `datasets/`, as described in [the data guide](datasets/README.md). Open `HWs/HW1/hw1_runner.ipynb` or `HWs/HW2/hw2_runner.ipynb` and execute the setup cells in order. HW1 calls its question functions at the end; HW2 defines several optional `testQ*` functions whose calls are commented out. Uncomment or call them to run the corresponding experiments.
 
 Dependencies are currently unpinned; a reproducible environment lock should be recorded after a successful full run.
 
@@ -48,8 +58,9 @@ Dependencies are currently unpinned; a reproducible environment lock should be r
 
 ```text
 recommender-sys-and-web-mining/
-├── HW1/                    # Implementation and experiment runner
-├── HW2/                    # Implementation and experiment runner
+├── HWs/                    # Homework implementations and experiments
+│   ├── HW1/
+│   └── HW2/
 ├── archive/templates/      # Original course scaffolds, not runnable solutions
 ├── datasets/               # Data download guide; files in Releases
 └── requirements.txt
